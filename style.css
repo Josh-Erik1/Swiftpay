@@ -1,0 +1,73 @@
+:root {
+  --deep-blue: #012063;
+  --ocean-blue: #126bc5;
+  --dark-gray: #333333;
+  --text-gray: #6d6e6e;
+}
+
+body {
+  font-family: "Manrope", "Montserrat", "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ========== NAVBAR ========== */
+header {
+  background-color: aliceblue;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0.2em 1.5em;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-right: auto;
+  width: 33%;
+}
+
+.navbar {
+  flex-grow: 1;
+}
+nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3em;
+}
+
+nav > ul > li {
+  list-style: none;
+  display: inline;
+}
+
+nav > ul > li:last-child {
+  margin-left: auto;
+  background: var(--deep-blue);
+  color: red;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  white-space: nowrap;
+}
+
+nav > ul > li:last-child a {
+  color: white;
+}
+
+nav > ul > li:last-child:hover {
+  background: var(--ocean-blue);
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
