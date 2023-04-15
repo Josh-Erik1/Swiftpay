@@ -14,10 +14,19 @@ body {
   width: 100%;
 }
 
+p {
+  font-size: 1rem;
+}
+
 /* ========== NAVBAR ========== */
 header {
   background-color: aliceblue;
+  width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 .header__wrapper {
@@ -26,8 +35,8 @@ header {
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding: 0.2em 1.5em;
   margin: 0 auto;
+  padding: 0.8rem 1rem;
 }
 
 .logo {
@@ -43,6 +52,7 @@ nav > ul {
   align-items: center;
   justify-content: center;
   gap: 1.3em;
+  margin: 0;
 }
 
 nav > ul > li {
@@ -50,10 +60,13 @@ nav > ul > li {
   display: inline;
 }
 
+nav > ul > li > a:hover {
+  color: var(--ocean-blue);
+}
+
 nav > ul > li:last-child {
   margin-left: auto;
-  background: var(--deep-blue);
-  color: red;
+  /* background: var(--deep-blue); */
   border-radius: 8px;
   padding: 0.6em 1.2em;
   white-space: nowrap;
@@ -63,11 +76,142 @@ nav > ul > li:last-child a {
   color: white;
 }
 
-nav > ul > li:last-child:hover {
+nav > ul > li:last-child a:hover {
   background: var(--ocean-blue);
 }
 
 nav > ul > li > a {
   text-decoration: none;
   color: var(--dark-gray);
+  font-size: 16px;
+}
+
+/* ========== HERO SECTION ========== */
+
+.container {
+  margin-inline: auto;
+  max-width: 1200px;
+}
+
+.hero__section {
+  position: relative;
+}
+
+.hero-container {
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+.section__content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.section__content h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.section__content p {
+  color: var(--text-gray);
+}
+
+.main__buttons-container {
+  width: 50%;
+  margin-inline: auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button {
+  border: none;
+}
+
+.ghost-button {
+  background: transparent;
+  color: var(--deep-blue);
+  border-radius: 8px;
+  padding: 0.6em 2em;
+  white-space: nowrap;
+  font-family: "Manrope";
+  font-size: 1rem;
+  outline: 1px solid var(--deep-blue);
+}
+
+.ghost-button:hover {
+  background: var(--ocean-blue);
+  color: white;
+  outline: none;
+}
+
+.default-button {
+  background: var(--deep-blue);
+  color: white;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  white-space: nowrap;
+  font-family: "Manrope";
+  font-size: 1rem;
+  outline: 1px solid var(--deep-blue);
+}
+
+.default-button i {
+  margin-left: 10px;
+}
+
+.default-button:hover {
+  background: var(--ocean-blue);
+  outline: none;
+  color: white;
+}
+
+.asset__container,
+.assets__container2 {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+
+.asset__container img,
+.asset__container2 img {
+  width: 100%;
+}
+
+.asset__container2 img {
+  width: 40%;
+  position: absolute;
+  right: -90px;
+  bottom: 0;
+}
+
+.ass .hero__image-container {
+  width: 70%;
+  margin-inline: auto;
+}
+
+.hero__image-container img {
+  width: 100%;
+  height: auto;
+  transform: translateX(20px);
+}
+
+.partners-container {
+  display: flex;
+  background-color: var(--deep-blue);
+  height: 13rem;
+  width: 100%;
+  color: white;
+  position: absolute;
+  bottom: 0;
 }
