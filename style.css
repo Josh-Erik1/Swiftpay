@@ -4,6 +4,7 @@
   --dark-gray: #333333;
   --text-gray: #6d6e6e;
   --blue-background: #eaf1ff;
+  --montserrat: "Montserrat";
 }
 
 body {
@@ -58,6 +59,7 @@ nav > ul {
 
 nav > ul > li {
   list-style: none;
+  white-space: nowrap;
   display: inline;
 }
 
@@ -98,7 +100,7 @@ section {
 .container {
   margin-inline: auto;
   max-width: 1200px;
-  padding-top: 1rem;
+  padding: 1rem 5rem 0;
 }
 
 .hero__section {
@@ -153,11 +155,26 @@ button {
   border: none;
 }
 
+.button {
+  color: white;
+  border-radius: 8px;
+  padding: 0.8em 1.2em;
+  white-space: nowrap;
+  font-family: "Manrope";
+  font-size: 1rem;
+  outline: 1px solid var(--deep-blue);
+}
+
+.button:hover {
+  background: var(--ocean-blue);
+  outline: none;
+  color: white;
+}
+
 .ghost-button {
   background: transparent;
   color: var(--deep-blue);
   border-radius: 8px;
-  padding: 0.6em 2em;
   white-space: nowrap;
   font-family: "Manrope";
   font-size: 1rem;
@@ -174,7 +191,6 @@ button {
   background: var(--deep-blue);
   color: white;
   border-radius: 8px;
-  padding: 0.6em 1.2em;
   white-space: nowrap;
   font-family: "Manrope";
   font-size: 1rem;
@@ -238,6 +254,10 @@ button {
   display: flex;
   margin-inline: auto;
   max-width: 1200px;
+}
+
+.partners-content h3 {
+  font-size: 1.5rem;
 }
 
 .section__content span {
@@ -315,4 +335,153 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.faq__container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-bottom: 5rem;
+}
+
+.faq__item {
+  background: white;
+  padding: 1rem;
+  border-radius: 4px;
+  outline: 1px solid rgba(51, 51, 51, 0.5);
+}
+
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__question p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.faq__answer {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  gap: 4rem;
+}
+
+.left__container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.left__container h1 {
+  font-size: 3rem;
+}
+
+.right__container {
+  width: 50%;
+}
+
+.right__container img {
+  width: 100%;
+}
+
+.button__container {
+  margin-top: 3rem;
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.button i {
+  margin-right: 10px;
+}
+
+footer {
+  background: var(--deep-blue);
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+}
+
+form {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.email-input {
+  padding: 1rem;
+  outline: none;
+  font-size: 16px;
+  padding-right: 110px;
+  border: 0;
+}
+
+.email-input::placeholder {
+  color: rgba(51, 51, 51, 0.5);
+  font-size: 16px;
+}
+
+.copywright {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit__button {
+  background: var(--ocean-blue);
+  color: white;
+  min-width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 0;
+  outline: none;
+}
+
+.footer__container .footer__section {
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer__section h3 {
+  margin: 0 0 2rem;
+}
+
+.footer__section ul {
+  padding: 0;
+}
+
+.footer__section li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.footer__section a i {
+  font-size: 1.6rem;
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.footer__icons-container {
+  display: flex;
+  justify-content: space-around;
 }
