@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <title>SwiftPay</title>
+    <script src="index.js" defer></script>
   </head>
   <body>
     <header>
@@ -29,6 +31,10 @@
             <li><a href="#" class="button default-button">Download Now</a></li>
           </ul>
         </nav>
+        <button id="toggle">
+          <span class="nav__toggle show"><i class="fa-solid fa-bars"></i></span>
+          <span class="nav__toggle"><i class="fa-solid fa-x"></i></span>
+        </button>
       </div>
     </header>
 
@@ -65,7 +71,9 @@
         <div class="partners-content">
           <h3>Our Growth Partners</h3>
         </div>
-        <div></div>
+        <div class="partners__banks">
+          <img src="./assets/banks.png" alt="" />
+        </div>
       </div>
     </section>
     <section class="blue-shade">
@@ -82,13 +90,13 @@
           <div class="card">
             <div class="card-content">
               <div class="number">
-                <h3>2</h3>
+                <h3>1</h3>
               </div>
-              <h6>Convenience</h6>
+              <h6>Security</h6>
               <p>
-                SwiftPay offers easy and convenient access to your finances,
-                allowing you to manage your money from your smartphone or tablet
-                anytime and anywhere.
+                SwiftPay comes with advanced security features such as
+                two-factor authentication, encryption, and fraud monitoring,
+                which can help keep your financial information safe.
               </p>
             </div>
           </div>
@@ -108,26 +116,24 @@
           <div class="card">
             <div class="card-content">
               <div class="number">
-                <h3>2</h3>
+                <h3>3</h3>
               </div>
-              <h6>Convenience</h6>
+              <h6>Budgeting and Tracking</h6>
               <p>
-                SwiftPay offers easy and convenient access to your finances,
-                allowing you to manage your money from your smartphone or tablet
-                anytime and anywhere.
+                SwiftPay comes with budgeting and tracking tools that can help
+                you keep track of your spending and savings goals.
               </p>
             </div>
           </div>
           <div class="card">
             <div class="card-content">
               <div class="number">
-                <h3>2</h3>
+                <h3>4</h3>
               </div>
-              <h6>Convenience</h6>
+              <h6>Cost-effectiveness</h6>
               <p>
-                SwiftPay offers easy and convenient access to your finances,
-                allowing you to manage your money from your smartphone or tablet
-                anytime and anywhere.
+                SwiftPay have lower fees than traditional banking institutions,
+                which can save you money in the long run.
               </p>
             </div>
           </div>
@@ -136,7 +142,7 @@
     </section>
     <section>
       <div class="container">
-        <div class="section__content">
+        <div class="section__content card__container">
           <h2>Our SwiftPay Citizenship Cards</h2>
           <p>
             Get <span>SwiftPay</span> Virtual and Physical card for <br />
