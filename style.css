@@ -198,7 +198,8 @@ section {
   gap: 2rem;
 }
 
-button {
+button,
+button:focus {
   border: none;
   outline: none;
 }
