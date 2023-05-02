@@ -1,12 +1,17 @@
-const toggle = document.getElementById("toggle");
+const hamburger = document.querySelector(".toggle__button");
+const bars = document.querySelectorAll(".bars");
+const navMenu = document.querySelector(".nav__list");
+const navLink = document.querySelectorAll(".nav__link");
 
-const icon = toggle.querySelector("span");
+hamburger.addEventListener("click", () => {
+  console.log("clicked");
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
 
-console.log(toggle);
-console.log(icon);
-
-toggle.addEventListener("click", () => {
-  console.log(icon);
-  icon.classList.toggle("show");
-  icon.classList.toggle("");
+navLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  });
 });

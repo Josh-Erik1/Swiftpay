@@ -90,9 +90,21 @@ nav > ul > li > a {
   font-size: 16px;
 }
 
-.nav__toggle {
+.toggle__button {
   display: none;
-  color: var(--deep-blue);
+}
+
+.nav__list {
+  transition: all 0.3s ease-in-out;
+}
+
+.bars {
+  width: 25px;
+  height: 2px;
+  background: var(--deep-blue);
+  margin: 3px auto;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* ========== HERO SECTION ========== */
@@ -177,6 +189,7 @@ section {
 
 button {
   border: none;
+  outline: nonw;
 }
 
 .button {
@@ -554,16 +567,42 @@ form {
     align-items: center;
   }
 
-  .nav__toggle.show {
-    display: block;
+  .toggle__button {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    cursor: pointer;
   }
 
-  nav {
-    display: none;
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-background);
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    left: 100%;
+    top: 70px;
+    padding: 20px;
   }
 
-  .nav__toggle {
-    display: none;
+  .nav__list.active {
+    left: 0;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    margin: 0px;
+    border-radius: 8px;
+  }
+  nav ul li:last-child {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  nav ul li:hover {
+    background-color: azure;
+    width: 100%;
   }
 
   .logo {
@@ -577,6 +616,18 @@ form {
   .logo img {
     width: 100%;
     height: 40px;
+  }
+
+  .toggle__button.active .bars:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle__button.active .bars:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .toggle__button.active .bars:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   .container {
@@ -632,5 +683,9 @@ form {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+  }
+
+  .email-input {
+    padding-right: 65px;
   }
 }
