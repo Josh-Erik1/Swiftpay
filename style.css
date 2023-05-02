@@ -18,6 +18,7 @@ body {
 
 * {
   box-sizing: border-box;
+  outline: 0;
 }
 
 p {
@@ -569,6 +570,7 @@ form {
 @media screen and (max-width: 768px) {
   * {
     box-sizing: border-box;
+    outline: 0;
   }
 
   .header__wrapper {
