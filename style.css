@@ -214,6 +214,10 @@ button {
   cursor: pointer;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button:hover {
   background: var(--ocean-blue);
   outline: none;
