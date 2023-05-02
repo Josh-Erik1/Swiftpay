@@ -200,7 +200,7 @@ section {
 
 button {
   border: none;
-  outline: nonw;
+  outline: none;
 }
 
 .button {
@@ -210,7 +210,7 @@ button {
   white-space: nowrap;
   font-family: "Manrope";
   font-size: 1rem;
-  outline: 1px solid var(--deep-blue);
+  outline: none;
   cursor: pointer;
 }
 
