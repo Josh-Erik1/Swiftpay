@@ -404,7 +404,7 @@ button:focus {
 
 .testimonial-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 6rem;
 }
 
@@ -442,6 +442,22 @@ button:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.open {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.faq__toggle.open {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  transform: rotate(90deg);
+}
+.faq__toggle {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .faq__question p {
@@ -451,6 +467,10 @@ button:focus {
 }
 
 .faq__answer {
+  display: block;
+}
+
+.hide {
   display: none;
 }
 
